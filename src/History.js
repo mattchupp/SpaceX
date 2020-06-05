@@ -1,6 +1,7 @@
 /* Display historical events of spacex */
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
+import { Link } from 'react-router-dom';
 
 function History() {
 
@@ -26,6 +27,7 @@ function History() {
   return (
     <div>
       <h1>History</h1>
+      <Link to="/">Go Home</Link>
       {history.map((event) => (
         <div key={event.id}>
           <h2>{event.title}</h2>
