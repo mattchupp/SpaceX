@@ -56,7 +56,9 @@ function LatestLaunch() {
       <Title>Latest Launch</Title>
       <hr />
       <Mission>{latestLaunch.mission_name}</Mission>
-      <p>{moment.unix(latestLaunch.launch_date_unix).format("LLLL")}</p>
+      <p>
+        {moment.unix(latestLaunch.launch_date_unix).format("LLLL")} 
+      </p>
       {launchImages.map((img) => (
         <img style={imgStyles} src={img} />
       ))}
