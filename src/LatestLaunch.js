@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import styled from 'styled-components'; 
 import moment from 'moment'; 
+import TextBlock from './components/TextBlock';
 
 
 const Container = styled.div`
@@ -18,11 +19,6 @@ const Mission = styled.h3`
   font-weight: bold; 
   font-size: 1.6rem;
   margin-top: 2rem;
-`
-const Details = styled.p`
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  margin-bottom: 1rem;
 `
 
 const imgStyles = {
@@ -60,9 +56,9 @@ function LatestLaunch() {
         {moment.unix(latestLaunch.launch_date_unix).format("LLLL")} 
       </p>
       {launchImages.map((img) => (
-        <img style={imgStyles} src={img} />
+        <img style={imgStyles} src={img} alt="launch" />
       ))}
-      <Details>{latestLaunch.details}</Details>
+      <TextBlock>{latestLaunch.details}</TextBlock>
       
       
       
