@@ -25,7 +25,6 @@ function History() {
   return (
     <div>
       <h1>History</h1>
-      <Link to="/">Go Home</Link>
       {history.map((event) => (
         <HistoryCard 
           key={event.id}

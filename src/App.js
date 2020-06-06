@@ -13,13 +13,11 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <div>
-      <NavBar />
       <Router>
+        <NavBar />
         <Switch>
-
           <Route exact path="/">
             <div className="container">
-              <Link to="/history">View History</Link>
               <LatestLaunch />
             </div>
           </Route>
