@@ -2,10 +2,7 @@
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
 import { Link } from 'react-router-dom';
-// import styled from 'styled-components';
 import HistoryCard from './components/HistoryCard';
-
-
 
 
 function History() {
@@ -24,12 +21,6 @@ function History() {
     })
     
   }, [])
-
-  // useEffect(() => {
-  //   console.log(history)
-  // })
-
-
 
   return (
     <div>
