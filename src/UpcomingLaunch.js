@@ -56,7 +56,7 @@ function UpcomingLaunch() {
         {moment.unix(latestLaunch.launch_date_unix).format("LLLL")} 
       </p>
       {launchImages.map((img) => (
-        <img style={imgStyles} src={img} />
+        <img style={imgStyles} src={img} alt="launch image"/>
       ))}
       <TextBlock>{latestLaunch.details}</TextBlock>
       
