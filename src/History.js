@@ -45,15 +45,6 @@ function History() {
           article={event.links.article}
           wikipedia={event.links.wikipedia}
         />
-        // <Card key={event.id}>
-        //   <h2>{event.title}</h2>
-        //   <span>{moment.unix(event.event_date_unix).format("LLLL")}</span>
-        //   <Details>{event.details}</Details>
-        //   <p>More Reading</p>
-        //   <a href={event.links.reddit}>Reddit</a>
-        //   <a href={event.links.article}>Article</a>
-        //   <a href={event.links.wikipedia}>Wikipedia</a>
-        // </Card>
       ))}
     </div>
   )
