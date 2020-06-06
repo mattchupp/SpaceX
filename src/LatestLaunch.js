@@ -22,6 +22,7 @@ const Mission = styled.h3`
 const Details = styled.p`
   font-size: 1.2rem;
   line-height: 1.8rem;
+  margin-bottom: 1rem;
 `
 
 
