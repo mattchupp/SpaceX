@@ -36,10 +36,36 @@ function HistoryCard(props) {
       <span>{moment.unix(props.date).format("LLLL")}</span>
       <Details>{props.details}</Details>
       <Reading>
-        <ReadingItem>More Reading:</ReadingItem>
-        <ReadingItem><a href={props.reddit} target="_blank">Reddit</a></ReadingItem>
-        <ReadingItem><a href={props.article} target="_blank">Article</a></ReadingItem>
-        <ReadingItem><a href={props.wikipedia} target="_blank">Wikipedia</a></ReadingItem>
+        <ReadingItem>
+          More Reading:
+        </ReadingItem>
+        <ReadingItem>
+          <a 
+            href={props.reddit} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Reddit
+          </a>
+        </ReadingItem>
+        <ReadingItem>
+          <a 
+            href={props.article} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Article
+          </a>
+        </ReadingItem>
+        <ReadingItem>
+          <a 
+            href={props.wikipedia} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Wikipedia
+          </a>
+        </ReadingItem>
       </Reading>
       
     </Card>
