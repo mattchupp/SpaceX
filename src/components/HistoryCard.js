@@ -6,6 +6,7 @@ import moment from 'moment';
 /* Styles */
 const Title = styled.h2`
   font-weight: bold; 
+  font-size: 2rem;
 `
 
 const Card = styled.div`
@@ -16,8 +17,8 @@ const Card = styled.div`
 `
 const Details = styled.p`
   margin: 1.5rem 0;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 `
 const Reading = styled.ul`
   list-style-type: none; 
@@ -37,9 +38,9 @@ function HistoryCard(props) {
       <Details>{props.details}</Details>
       <Reading>
         <ReadingItem>More Reading:</ReadingItem>
-        <ReadingItem><a href={props.reddit}>Reddit</a></ReadingItem>
-        <ReadingItem><a href={props.article}>Article</a></ReadingItem>
-        <ReadingItem><a href={props.wikipedia}>Wikipedia</a></ReadingItem>
+        <ReadingItem><a href={props.reddit} target="_blank">Reddit</a></ReadingItem>
+        <ReadingItem><a href={props.article} target="_blank">Article</a></ReadingItem>
+        <ReadingItem><a href={props.wikipedia} target="_blank">Wikipedia</a></ReadingItem>
       </Reading>
       
     </Card>
