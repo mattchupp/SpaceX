@@ -8,24 +8,28 @@ import {
 } from "react-router-dom"; 
 import History from './History'; 
 import LatestLaunch from './LatestLaunch'; 
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <div className="container">
-      
+    <div>
+      <NavBar />
       <Router>
         <Switch>
 
           <Route exact path="/">
-            <h1>SpaceX Stuff</h1>
-            <Link to="/history">View History</Link>
-            <LatestLaunch />
+            <div className="container">
+              <Link to="/history">View History</Link>
+              <LatestLaunch />
+            </div>
           </Route>
 
   
 
           <Route exact path="/history">
-            <History />
+            <div className="container">
+              <History />
+            </div>
           </Route>
 
         </Switch>
