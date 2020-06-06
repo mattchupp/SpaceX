@@ -8,7 +8,6 @@ const Title = styled.h2`
   font-weight: bold; 
   font-size: 2rem;
 `
-
 const Card = styled.div`
   background-color: #030200;
   padding: 1rem; 
