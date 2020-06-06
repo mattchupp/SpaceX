@@ -25,6 +25,11 @@ const Details = styled.p`
   margin-bottom: 1rem;
 `
 
+const imgStyles = {
+  'margin': '2rem 1rem 2rem 0',
+  'height': '400px',
+  'width': 'auto'
+}
 
 
 function LatestLaunch() {
@@ -45,12 +50,6 @@ function LatestLaunch() {
     })
     
   }, [])
-
-  const imgStyles = {
-    'margin': '2rem 1rem 2rem 0',
-    'height': '400px',
-    'width': 'auto'
-  }
 
   return (
     <Container>
