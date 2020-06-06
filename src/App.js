@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom"; 
 import History from './History'; 
+import LatestLaunch from './LatestLaunch'; 
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Switch>
 
           <Route exact path="/">
-            <h1>Hello!</h1>
+            <h1>SpaceX Stuff</h1>
             <Link to="/history">View History</Link>
+            <LatestLaunch />
           </Route>
 
   
