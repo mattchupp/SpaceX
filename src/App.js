@@ -8,6 +8,7 @@ import {
 } from "react-router-dom"; 
 import History from './History'; 
 import LatestLaunch from './LatestLaunch'; 
+import NextLaunch from './NextLaunch'; 
 import NavBar from './components/NavBar';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/">
             <div className="container">
               <LatestLaunch />
+              <NextLaunch />
             </div>
           </Route>
 
