@@ -4,21 +4,11 @@ import axios from 'axios';
 import styled from 'styled-components'; 
 import moment from 'moment'; 
 import TextBlock from './TextBlock';
+import { Typography } from '@material-ui/core';
 
 
 const Container = styled.div`
   margin: 2rem 0 0 0; 
-
-`
-const Title = styled.h2`
-  font-weight: bold; 
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-`
-const Mission = styled.h3`
-  font-weight: bold; 
-  font-size: 1.6rem;
-  margin-top: 2rem;
 `
 
 const imgStyles = {
@@ -49,12 +39,12 @@ function LatestLaunch() {
 
   return (
     <Container>
-      <Title>Latest Launch</Title>
+      <Typography variant="h1" component="h1" gutterBottom>Latest Launch</Typography>
       <hr />
-      <Mission>{latestLaunch.mission_name}</Mission>
-      <p>
+      <Typography variant="h2" component="h2">{latestLaunch.mission_name}</Typography>
+      <Typography variant="body1" gutterBottom>
         {moment.unix(latestLaunch.launch_date_unix).format("LLLL")} 
-      </p>
+      </Typography>
       {launchImages.map((img) => (
         <img style={imgStyles} src={img} alt="launch" />
       ))}
