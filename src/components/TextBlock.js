@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 /* Styles */
 const Details = styled.p`
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   font-size: 1.2rem;
   line-height: 1.8rem;
 `
