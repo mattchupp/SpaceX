@@ -1,9 +1,15 @@
 /* Display historical events of spacex */
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import HistoryCard from './components/HistoryCard';
 
+const Title = styled.h1`
+  font-weight: bold; 
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+`
 
 function History() {
 
@@ -24,7 +30,7 @@ function History() {
 
   return (
     <div>
-      <h1>History</h1>
+      <Title>History</Title>
       {history.map((event) => (
         <HistoryCard 
           key={event.id}
