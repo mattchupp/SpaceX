@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
   width: 100%;  
-  background-color: #424141; 
+  background-color: #0F2942; 
   color: white; 
   display: flex; 
   align-items: center; 
