@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 const Title = styled.h2`
   font-weight: bold; 
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
 `
 const Mission = styled.h3`
@@ -22,7 +22,7 @@ const Mission = styled.h3`
 `
 
 const imgStyles = {
-  'margin': '2rem 1rem 2rem 0',
+  'margin': '2rem 1rem 1rem 0',
   'height': '400px',
   'width': 'auto'
 }
@@ -58,10 +58,7 @@ function LatestLaunch() {
       {launchImages.map((img) => (
         <img style={imgStyles} src={img} alt="launch" />
       ))}
-      <TextBlock>{latestLaunch.details}</TextBlock>
-      
-      
-      
+      <TextBlock>{latestLaunch.details}</TextBlock>   
     </Container>
   )
 }
