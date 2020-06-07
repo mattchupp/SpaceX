@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
 import styled from 'styled-components';
-import HistoryCard from './components/HistoryCard';
+import HistoryCard from '../components/HistoryCard';
 
 const Title = styled.h1`
   font-weight: bold; 

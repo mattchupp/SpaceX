@@ -5,7 +5,7 @@ import {
   Switch,
   Route
 } from "react-router-dom"; 
-import History from './History'; 
+import History from './pages/History'; 
 import Home from './pages/Home'; 
 import NavBar from './components/NavBar';
 
