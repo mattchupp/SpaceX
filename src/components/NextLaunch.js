@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import styled from 'styled-components'; 
 import moment from 'moment'; 
-import TextBlock from './TextBlock';
+// import { Typography } from '@material-ui/core';
+// import TextBlock from './components/TextBlock';
+import Launch from './Launch'; 
 
 
 const Container = styled.div`
   margin: 2rem 0 0 0; 
-
 `
 const Title = styled.h1`
   font-weight: bold; 
@@ -48,15 +49,12 @@ function NextLaunch() {
   }, [])
 
   return (
-    <Container>
-      <Title>Next Launch</Title>
-      <hr />
-      <Mission>{nextLaunch.mission_name}</Mission>
-      <p>
-        {moment.unix(nextLaunch.launch_date_unix).format("LLLL")} 
-      </p>
-      <TextBlock>{nextLaunch.details}</TextBlock>   
-    </Container>
+    <Launch 
+      title="Latest Launch"
+      missionName={nextLaunch.mission_name}
+      missionDate={nextLaunch.launch_date_unix}
+      missionDetails={nextLaunch.details}
+    />
   )
 }
 

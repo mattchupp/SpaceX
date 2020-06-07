@@ -1,21 +1,7 @@
 /* Display latest launch from spacex */
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
-import styled from 'styled-components'; 
-import moment from 'moment'; 
-import TextBlock from './TextBlock';
-import { Typography } from '@material-ui/core';
-
-
-const Container = styled.div`
-  margin: 2rem 0 0 0; 
-`
-
-const imgStyles = {
-  'margin': '2rem 1rem 1rem 0',
-  'height': '400px',
-  'width': 'auto'
-}
+import Launch from './Launch'; 
 
 
 function LatestLaunch() {
@@ -38,7 +24,23 @@ function LatestLaunch() {
   }, [])
 
   return (
-    <Container>
+    <Launch 
+      title="Latest Launch"
+      missionName={latestLaunch.mission_name}
+      missionDate={latestLaunch.launch_date_unix}
+      images={launchImages}
+      missionDetails={latestLaunch.details}
+    />
+  )
+}
+
+
+export default LatestLaunch
+
+
+
+/*
+<Container>
       <Typography variant="h1" component="h1" gutterBottom>Latest Launch</Typography>
       <hr />
       <Typography variant="h2" component="h2">{latestLaunch.mission_name}</Typography>
@@ -50,8 +52,6 @@ function LatestLaunch() {
       ))}
       <TextBlock>{latestLaunch.details}</TextBlock>   
     </Container>
-  )
-}
 
 
-export default LatestLaunch
+*/
