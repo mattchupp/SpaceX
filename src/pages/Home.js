@@ -3,7 +3,7 @@
 import React from 'react'; 
 import LatestLaunch from '../components/LatestLaunch';
 import NextLaunch from '../components/NextLaunch'; 
-import '../App.css'
+// import '../App.css'
 
 function Home() {
 
