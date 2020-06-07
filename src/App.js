@@ -30,7 +30,6 @@ function App() {
         </Switch>
       </Router>
 
-      {/* <History /> */}
     </div>
   );
 }
