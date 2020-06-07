@@ -3,12 +3,10 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom"; 
 import History from './History'; 
-import LatestLaunch from './LatestLaunch'; 
-import NextLaunch from './NextLaunch'; 
+import Home from './pages/Home'; 
 import NavBar from './components/NavBar';
 
 function App() {
@@ -18,10 +16,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
-            <div className="container">
-              <LatestLaunch />
-              <NextLaunch />
-            </div>
+            <Home />
           </Route>
 
   

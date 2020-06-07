@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
 import styled from 'styled-components'; 
-import moment from 'moment'; 
-import TextBlock from './components/TextBlock';
+import moment from 'moment';
+import TextBlock from './TextBlock' ; 
 
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 const Title = styled.h2`
   font-weight: bold; 
-  font-size: 2.6rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 `
 const Mission = styled.h3`
@@ -22,13 +22,13 @@ const Mission = styled.h3`
 `
 
 const imgStyles = {
-  'margin': '2rem 1rem 1rem 0',
+  'margin': '2rem 1rem 2rem 0',
   'height': '400px',
   'width': 'auto'
 }
 
 
-function LatestLaunch() {
+function UpcomingLaunch() {
 
   const [latestLaunch, setLatestLaunch] = useState([]); 
   const [launchImages, setLaunchImages] = useState([]); 
@@ -56,12 +56,15 @@ function LatestLaunch() {
         {moment.unix(latestLaunch.launch_date_unix).format("LLLL")} 
       </p>
       {launchImages.map((img) => (
-        <img style={imgStyles} src={img} alt="launch" />
+        <img style={imgStyles} src={img} alt="launch"/>
       ))}
-      <TextBlock>{latestLaunch.details}</TextBlock>   
+      <TextBlock>{latestLaunch.details}</TextBlock>
+      
+      
+      
     </Container>
   )
 }
 
 
-export default LatestLaunch
+export default UpcomingLaunch

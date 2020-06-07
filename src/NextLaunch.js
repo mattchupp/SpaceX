@@ -21,12 +21,13 @@ const Mission = styled.h3`
   font-size: 1.6rem;
   margin-top: 2rem;
 `
-
+/*
 const imgStyles = {
   'margin': '2rem 1rem 2rem 0',
   'height': '400px',
   'width': 'auto'
 }
+*/
 
 
 function NextLaunch() {
