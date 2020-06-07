@@ -2,15 +2,18 @@
 /* Homepage */
 import React from 'react'; 
 import LatestLaunch from '../components/LatestLaunch';
-import UpcomingLaunch from '../components/UpcomingLaunch'; 
+import NextLaunch from '../components/NextLaunch'; 
 
 function Home() {
 
   return (
-    <div className="container">
-      <LatestLaunch />
-      <UpcomingLaunch />
+    <div>
+      <div className="container">
+        <LatestLaunch />
+        <NextLaunch />
+      </div>
     </div>
+    
   )
 }
 
