@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
   width: 100%;  
-  background-color: #424a44; 
+  background-color: #424141; 
   color: white; 
   display: flex; 
   align-items: center; 
@@ -12,7 +12,9 @@ const Nav = styled.nav`
 `
 
 const NavItem = {
-  'marginRight': '1rem'
+  'marginRight': '1rem',
+  'textDecoration': 'none',
+  'fontSize': '1.2rem'
 }
 
 function NavBar() {
@@ -20,7 +22,7 @@ function NavBar() {
   return (
     <Nav>
         <Link style={NavItem} to="/">Home</Link>
-        <Link to="/history">History</Link>
+        <Link style={NavItem} to="/history">History</Link>
     </Nav>
   )
 }
