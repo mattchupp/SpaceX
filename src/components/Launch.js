@@ -11,7 +11,7 @@ import { Typography } from '@material-ui/core';
 
 /* Styles */
 const Container = styled.div`
-  margin: 2rem 0 0 0; 
+  margin: 3rem 0 0 0; 
 `
 const imgStyles = {
   'margin': '2rem 1rem 1rem 0',

@@ -1,4 +1,7 @@
 
+body {
+  margin: 0;
+}
 
 /*
 body {
@@ -24,7 +27,7 @@ code {
 }
 
 
-
+*/
 
 html {
   box-sizing: border-box;
@@ -50,4 +53,3 @@ img {
   height: auto;
 }
 
-*/
