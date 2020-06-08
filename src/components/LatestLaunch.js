@@ -36,22 +36,3 @@ function LatestLaunch() {
 
 
 export default LatestLaunch
-
-
-
-/*
-<Container>
-      <Typography variant="h1" component="h1" gutterBottom>Latest Launch</Typography>
-      <hr />
-      <Typography variant="h2" component="h2">{latestLaunch.mission_name}</Typography>
-      <Typography variant="body1" gutterBottom>
-        {moment.unix(latestLaunch.launch_date_unix).format("LLLL")} 
-      </Typography>
-      {launchImages.map((img) => (
-        <img style={imgStyles} src={img} alt="launch" />
-      ))}
-      <TextBlock>{latestLaunch.details}</TextBlock>   
-    </Container>
-
-
-*/
