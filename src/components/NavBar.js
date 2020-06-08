@@ -15,7 +15,8 @@ const Nav = styled.nav`
 const NavItem = {
   'marginRight': '1rem',
   'textDecoration': 'none',
-  'fontSize': '1.2rem'
+  'fontSize': '1.2rem',
+  'color': '#fff'
 }
 
 function NavBar() {
