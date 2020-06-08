@@ -7,6 +7,9 @@ import styled from 'styled-components';
 
 const Date = styled.p`
   font-size: 3rem;
+  @media screen and (max-width: 700px) {
+    font-size: 2rem;
+  }
 `
  
 
