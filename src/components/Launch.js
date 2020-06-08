@@ -19,6 +19,16 @@ const imgStyles = {
   'width': 'auto'
 }
 
+const LinkButton = styled.a`
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #f5efd7;
+  color: #0c132b;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 1rem;
+`
+
 function Launch(props) {
 
   return (
@@ -32,7 +42,9 @@ function Launch(props) {
       {props.images && props.images.map((img) => (
         <img key={img} style={imgStyles} src={img} alt="launch" />
       ))}
-      <TextBlock>{props.missionDetails}</TextBlock>   
+      <TextBlock>{props.missionDetails}</TextBlock>  
+      {props.watch && <LinkButton href={props.watch} target="_blank">Watch</LinkButton>}
+      {props.reddit && <LinkButton href={props.reddit} target="_blank">Reddit</LinkButton>}
     </Container>
   )
 }

@@ -8,6 +8,8 @@ function LatestLaunch() {
 
   const [latestLaunch, setLatestLaunch] = useState([]); 
   const [launchImages, setLaunchImages] = useState([]); 
+  const [video, setVideo] = useState(''); 
+  const [reddit, setReddit] = useState(''); 
   
   useEffect(() => {
 
@@ -16,6 +18,8 @@ function LatestLaunch() {
       console.log(response.data)
       setLatestLaunch(response.data)
       setLaunchImages(response.data.links.flickr_images)
+      setVideo(response.data.links.video_link)
+      setReddit(response.data.links.reddit_launch)
     })
     .then(error => {
       console.log(error)
@@ -30,6 +34,8 @@ function LatestLaunch() {
       missionDate={latestLaunch.launch_date_unix}
       images={launchImages}
       missionDetails={latestLaunch.details}
+      watch={video}
+      reddit={reddit}
     />
   )
 }
