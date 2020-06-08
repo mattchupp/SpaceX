@@ -5,7 +5,6 @@ import LatestLaunch from '../components/LatestLaunch';
 import NextLaunch from '../components/NextLaunch'; 
 import dm2Launch from '../images/dm2_launch.jpg'; 
 // import styled from 'styled-components'; 
-// import { Typography } from '@material-ui/core';
 import '../App.css';
 
 const img = {
