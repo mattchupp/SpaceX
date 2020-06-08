@@ -10,11 +10,11 @@ const Title = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
 `
-const Mission = styled.h3`
-  font-weight: bold; 
-  font-size: 1.6rem;
-  margin-top: 2rem;
-`
+// const Mission = styled.h3`
+//   font-weight: bold; 
+//   font-size: 1.6rem;
+//   margin-top: 2rem;
+// `
 
 
 function UpcomingLaunches() {

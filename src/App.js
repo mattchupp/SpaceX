@@ -7,8 +7,8 @@ import {
 } from "react-router-dom"; 
 import History from './pages/History'; 
 import Home from './pages/Home'; 
-import NavBar from './components/NavBar';
-import Footer from './components/Footer'; 
+import NavBar from './components/utils/NavBar';
+import Footer from './components/utils/Footer'; 
 import UpcomingLaunches from './pages/UpcomingLaunches';
 
 function App() {
