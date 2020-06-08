@@ -9,6 +9,7 @@ import History from './pages/History';
 import Home from './pages/Home'; 
 import NavBar from './components/NavBar';
 import Footer from './components/Footer'; 
+import UpcomingLaunches from './pages/UpcomingLaunches';
 
 function App() {
   return (
@@ -25,6 +26,12 @@ function App() {
           <Route exact path="/history">
             <div className="container">
               <History />
+            </div>
+          </Route>
+
+          <Route exact path="/upcoming-launches">
+            <div className="container">
+              <UpcomingLaunches />
             </div>
           </Route>
 
