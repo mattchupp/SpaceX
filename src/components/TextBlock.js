@@ -1,7 +1,6 @@
 /* Component for all blocks of text */
 
 import React from 'react'; 
-import { Typography } from '@material-ui/core';
 
 const BodyStyle = {
   'margin': '2rem 0'
@@ -10,9 +9,9 @@ const BodyStyle = {
 function TextBlock(props) {
 
   return (
-    <Typography varient="body1" style={BodyStyle}>
+    <p style={BodyStyle}>
       {props.children}
-    </Typography>
+    </p>
   )
 
 }

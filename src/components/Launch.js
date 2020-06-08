@@ -7,7 +7,7 @@ import React from 'react';
 import styled from 'styled-components'; 
 import moment from 'moment'; 
 import TextBlock from './TextBlock';
-import { Typography } from '@material-ui/core';
+// import { Typography } from '@material-ui/core';
 
 /* Styles */
 const Container = styled.div`
@@ -23,12 +23,12 @@ function Launch(props) {
 
   return (
     <Container>
-      <Typography variant="h1" component="h1" gutterBottom>{props.title}</Typography>
+      <h2>{props.title}</h2>
       <hr />
-      <Typography variant="h2" component="h2">{props.missionName}</Typography>
-      <Typography variant="body1" gutterBottom>
+      <h3>{props.missionName}</h3>
+      <p>
         {moment.unix(props.missionDate).format("LLLL")} 
-      </Typography>
+      </p>
       {props.images && props.images.map((img) => (
         <img style={imgStyles} src={img} alt="launch" />
       ))}

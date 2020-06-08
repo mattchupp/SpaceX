@@ -7,16 +7,17 @@
 
 /* Styles for the homepage header photo*/
 .splash-container {
-  width: 100%; 
-  height: 100%; 
-  position: relative;
+  /* width: 100%; 
+  height: 100%;  */
+  /* position: relative; */
+  /* text-align: center; */
 }
 
-.splash-container-wrapper {
+/* .splash-container-wrapper {
   position: absolute;
   top: 50%;
   left: 50%; 
-  translate: (50%, 50%); 
-}
+  transform: (-50%, -50%); 
+} */
 
 
