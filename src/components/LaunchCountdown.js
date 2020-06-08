@@ -22,7 +22,8 @@ function Countdown() {
   
   
   useEffect(() => {
-
+   
+    console.log('Current Date ' + currentDate)
     axios.get('https://api.spacexdata.com/v3/launches/next')
     .then(response => {
       console.log(response.data)
@@ -34,10 +35,16 @@ function Countdown() {
     
   }, [])
 
+
+  // const date = moment(); 
+  // setCurrentDate(date)
+
+
   return (
     <>
       <h1>Next Launch</h1>
       <Date>{moment.unix(launchDate).format("LL @ h:mm a")} </Date>
+      {/* <p>{currentDate}</p> */}
     </>
   )
 }

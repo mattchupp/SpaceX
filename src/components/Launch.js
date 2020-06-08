@@ -30,7 +30,7 @@ function Launch(props) {
         {moment.unix(props.missionDate).format("LLLL")} 
       </p>
       {props.images && props.images.map((img) => (
-        <img style={imgStyles} src={img} alt="launch" />
+        <img key={img} style={imgStyles} src={img} alt="launch" />
       ))}
       <TextBlock>{props.missionDetails}</TextBlock>   
     </Container>
