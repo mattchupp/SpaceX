@@ -5,10 +5,6 @@ import styled from 'styled-components';
 import LaunchCard from '../components/LaunchCard'; 
 
 
-const Container = styled.div`
-  margin: 2rem 0 0 0; 
-
-`
 const Title = styled.h2`
   font-weight: bold; 
   font-size: 2rem;
@@ -19,12 +15,6 @@ const Mission = styled.h3`
   font-size: 1.6rem;
   margin-top: 2rem;
 `
-
-const imgStyles = {
-  'margin': '2rem 1rem 2rem 0',
-  'height': '400px',
-  'width': 'auto'
-}
 
 
 function UpcomingLaunches() {
@@ -47,12 +37,12 @@ function UpcomingLaunches() {
 
   return (
     <div>
-      <Title>History</Title>
+      <Title>Upcoming Launches</Title>
       {upcomingLaunches.map((event) => (
         <LaunchCard 
           key={event.id}
           title={event.title}
-          date={event.event_date_unix}
+          date={event.launch_date_unix}
           details={event.details}
           reddit={event.links.reddit}
           article={event.links.article}
