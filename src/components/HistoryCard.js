@@ -39,15 +39,17 @@ function HistoryCard(props) {
         <ReadingItem>
           More Reading:
         </ReadingItem>
-        <ReadingItem>
-          <a 
-            href={props.reddit} 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Reddit
-          </a>
-        </ReadingItem>
+        {props.reddit &&
+          <ReadingItem>
+            <a 
+              href={props.reddit} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Reddit
+            </a>
+          </ReadingItem>
+        }
         <ReadingItem>
           <a 
             href={props.article} 
