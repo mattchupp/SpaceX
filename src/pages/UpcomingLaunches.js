@@ -2,19 +2,15 @@
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
 import styled from 'styled-components'; 
-import LaunchCard from '../components/LaunchCard'; 
+import Card from '../components/Card'; 
 
 
-const Title = styled.h2`
+const Title = styled.h1`
   font-weight: bold; 
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 `
-// const Mission = styled.h3`
-//   font-weight: bold; 
-//   font-size: 1.6rem;
-//   margin-top: 2rem;
-// `
 
 
 function UpcomingLaunches() {
@@ -39,9 +35,9 @@ function UpcomingLaunches() {
     <div>
       <Title>Upcoming Launches</Title>
       {upcomingLaunches.map((event) => (
-        <LaunchCard 
+        <Card 
           key={event.id}
-          title={event.title}
+          title={event.mission_name}
           date={event.launch_date_unix}
           details={event.details}
           reddit={event.links.reddit}

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
 import styled from 'styled-components';
-import HistoryCard from '../components/HistoryCard';
+import Card from '../components/Card';
 
 const Title = styled.h1`
   font-weight: bold; 
@@ -32,7 +32,7 @@ function History() {
     <div>
       <Title>History</Title>
       {history.map((event) => (
-        <HistoryCard 
+        <Card 
           key={event.id}
           title={event.title}
           date={event.event_date_unix}
