@@ -24,6 +24,7 @@ function NavBar() {
     <Nav>
         <Link style={NavItem} to="/">Home</Link>
         <Link style={NavItem} to="/history">History</Link>
+        <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link>
     </Nav>
   )
 }
