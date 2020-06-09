@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'; 
 
@@ -18,7 +18,13 @@ const NavItem = {
   'color': '#fff'
 }
 
+// const Toggle = styled.a`
+//   cursor: pointer; 
+// `
+
 function NavBar() {
+
+  const [isToggled, setToggled] = useState(false); 
 
   return (
     <Nav>
@@ -31,3 +37,8 @@ function NavBar() {
 
 
 export default NavBar
+
+/* 
+<Toggle onClick={(() => setToggled(!isToggled))} style={NavItem}>Launches</Toggle>
+  {isToggled && <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> }
+*/
