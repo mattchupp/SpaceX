@@ -10,16 +10,15 @@ function Footer() {
     <FooterContainer>
       <div class="container">
         <hr />
-        <p>I am in no way affliated with SpaceX.</p>
         <p>
-          All information comes from the 
+          All information comes from the&nbsp; 
           <a 
             href="https://github.com/r-spacex/SpaceX-API" 
             target="_blank" 
             rel="noopener noreferrer"
           >
             SpaceX API
-          </a> | Check out the source code on 
+          </a> | Check out the source code on&nbsp; 
           <a 
             href="https://github.com/mattchupp/spacex" 
             target="_blank" 
