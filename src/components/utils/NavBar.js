@@ -18,19 +18,19 @@ const NavItem = {
   'color': '#fff'
 }
 
-const Toggle = styled.a`
-  cursor: pointer; 
-`
+// const Toggle = styled.a`
+//   cursor: pointer; 
+// `
 
-const Dropdown = styled.div`
-  display: block; 
-  color: white;
-  background-color: black;
-`
+// const Dropdown = styled.div`
+//   display: block; 
+//   color: white;
+//   background-color: black;
+// `
 
 function NavBar() {
 
-  const [isToggled, setToggled] = useState(false); 
+  // const [isToggled, setToggled] = useState(false); 
 
   return (
     <Nav>
