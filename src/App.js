@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import NavBar from './components/utils/NavBar';
 import Footer from './components/utils/Footer'; 
 import UpcomingLaunches from './pages/UpcomingLaunches';
+import PastLaunches from './pages/PastLaunches';
 
 function App() {
   return (
@@ -32,6 +33,12 @@ function App() {
           <Route exact path="/upcoming-launches">
             <div className="container">
               <UpcomingLaunches />
+            </div>
+          </Route>
+
+          <Route exact path="/past-launches">
+            <div className="container">
+              <PastLaunches />
             </div>
           </Route>
 

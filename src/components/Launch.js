@@ -7,7 +7,7 @@ import React from 'react';
 import styled from 'styled-components'; 
 import moment from 'moment'; 
 import TextBlock from './utils/TextBlock';
-// import { Typography } from '@material-ui/core';
+
 
 /* Styles */
 const Container = styled.div`

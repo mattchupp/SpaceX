@@ -18,9 +18,15 @@ const NavItem = {
   'color': '#fff'
 }
 
-// const Toggle = styled.a`
-//   cursor: pointer; 
-// `
+const Toggle = styled.a`
+  cursor: pointer; 
+`
+
+const Dropdown = styled.div`
+  display: block; 
+  color: white;
+  background-color: black;
+`
 
 function NavBar() {
 
@@ -30,7 +36,8 @@ function NavBar() {
     <Nav>
         <Link style={NavItem} to="/">Home</Link>
         <Link style={NavItem} to="/history">History</Link>
-        <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link>
+        <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> 
+        <Link style={NavItem} to="/past-launches">Past Launches</Link> 
     </Nav>
   )
 }
