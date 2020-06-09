@@ -20,6 +20,7 @@ const Search = styled.input`
 function PastLaunches() {
 
   const [pastLaunches, setPastLaunches] = useState([]); 
+  // const [filteredLaunches, setFilteredLaunches] = useState([])
   
   
   useEffect(() => {
@@ -34,12 +35,18 @@ function PastLaunches() {
     })
     
   }, [])
+
+  // function searchLaunches() {
+  //   const currentList = pastLaunches; 
+  //   const searchedList = []; 
+  // }
+
   
 
   return (
     <div>
       <Title>Past Launches</Title>
-      <Search placeholder="search" value=""/>
+      {/* <Search placeholder="search" value=""/> */}
       {pastLaunches.map((event) => (
         <Card 
           key={event.id}
