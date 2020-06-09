@@ -22,8 +22,6 @@ function App() {
             <Home />
           </Route>
 
-  
-
           <Route exact path="/history">
             <div className="container">
               <History />

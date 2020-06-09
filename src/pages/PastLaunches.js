@@ -20,6 +20,7 @@ const Search = styled.input`
 function PastLaunches() {
 
   const [pastLaunches, setPastLaunches] = useState([]); 
+  const [filterBy, setFilterBy] = useState('');
   // const [filteredLaunches, setFilteredLaunches] = useState([])
   
   
@@ -41,13 +42,24 @@ function PastLaunches() {
   //   const searchedList = []; 
   // }
 
+
+  // let currentLaunches = pastLaunches; 
+    // console.log(ticketsTable)
+    
+  let filteredLaunches = pastLaunches.filter((launch) => {
+    return launch.mission_name.toLowerCase().indexOf(filterBy.toLowerCase()) !== -1;
+  })
   
 
   return (
     <div>
       <Title>Past Launches</Title>
-      {/* <Search placeholder="search" value=""/> */}
-      {pastLaunches.map((event) => (
+      <Search 
+        placeholder="Search By Mission Name" 
+        value={filterBy} 
+        onChange={((e) => setFilterBy(e.target.value))}
+      />
+      {filteredLaunches.map((event) => (
         <Card 
           key={event.id}
           title={event.mission_name}
