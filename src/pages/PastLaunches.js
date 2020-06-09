@@ -21,7 +21,6 @@ function PastLaunches() {
 
   const [pastLaunches, setPastLaunches] = useState([]); 
   const [filterBy, setFilterBy] = useState('');
-  // const [filteredLaunches, setFilteredLaunches] = useState([])
   
   
   useEffect(() => {
@@ -37,15 +36,6 @@ function PastLaunches() {
     
   }, [])
 
-  // function searchLaunches() {
-  //   const currentList = pastLaunches; 
-  //   const searchedList = []; 
-  // }
-
-
-  // let currentLaunches = pastLaunches; 
-    // console.log(ticketsTable)
-    
   let filteredLaunches = pastLaunches.filter((launch) => {
     return launch.mission_name.toLowerCase().indexOf(filterBy.toLowerCase()) !== -1;
   })
