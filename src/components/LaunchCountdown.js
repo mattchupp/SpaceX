@@ -18,7 +18,7 @@ function Countdown() {
   // const [nextLaunch, setNextLaunch] = useState([]); 
   // const [currentDate, setCurrentDate] = useState();
   const [launchDate, setLaunchDate] = useState();
-  const [countdownTimer, setCountdownTimer] = useState(); 
+  // const [countdownTimer, setCountdownTimer] = useState(); 
 
   
   
@@ -60,6 +60,7 @@ function Countdown() {
 
   */
 
+  /*
   useEffect(() => {
     const date = moment().unix(); 
     const nextLaunch = moment(launchDate); 
@@ -67,10 +68,11 @@ function Countdown() {
     // console.log('Launch Date ' + moment.unix(launchDate).format('MM DD YYYY, h:mm a'))
     const difference = nextLaunch - date; 
     const timeUntil = moment.duration(difference * 1000, 'days');
-    setCountdownTimer(timeUntil);
+    // setCountdownTimer(timeUntil);
 
-    setCountdownTimer(timeUntil)
+    // setCountdownTimer(timeUntil)
   }, [launchDate])
+  */
 
   // setInterval(CountdownClock, 1000);
 
