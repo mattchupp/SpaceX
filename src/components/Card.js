@@ -23,7 +23,7 @@ const Title = styled.h2`
   font-size: 2rem;
 `
 const CardContainer = styled.div`
-  background-color: #030200;
+  background-color: #272727;
   padding: 1rem; 
   margin: 2rem 0;
   border-radius: 10px; 
