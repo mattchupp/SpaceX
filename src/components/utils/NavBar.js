@@ -14,13 +14,14 @@ const Nav = styled.nav`
     display: none; 
   }
 `
-
+/* 
+  display: flex; 
+  align-items: center; 
+*/
 const MobileNav = styled.nav`
   width: 100%;  
   background-color: #0F2942; 
   color: white; 
-  display: flex; 
-  align-items: center; 
   padding: 1rem;
 
   @media screen and (min-width: 800px) {
@@ -35,15 +36,31 @@ const NavItem = {
   'color': '#fff'
 }
 
+const MobileNavItem = {
+  'marginLeft': '1rem',
+  'textDecoration': 'none',
+  'fontSize': '1.2rem',
+  'color': '#fff'
+}
+
+const NavItemMobile = styled.li`
+  
+`
+
+const MobileNavContainer = styled.ul`
+  'display': 'flex'; 
+  'flex-direction': 'column';
+  'align-items': 'center';
+
+  @media screen and (min-width: 800px) {
+    display: none; 
+  }
+`
+
 const Toggle = styled.a`
   cursor: pointer; 
 `
 
-// const Dropdown = styled.div`
-//   display: block; 
-//   color: white;
-//   background-color: black;
-// `
 
 function NavBar() {
 
@@ -59,8 +76,54 @@ function NavBar() {
       </Nav>
 
       <MobileNav>
-        <Toggle onClick={(() => setToggled(!isToggled))} style={NavItem}>Menu</Toggle>
+        <Toggle 
+          onClick={(() => setToggled(!isToggled))} 
+          style={NavItem}
+        >
+          Menu
+        </Toggle>
       </MobileNav>
+
+      {isToggled && 
+        <MobileNavContainer>
+          <NavItemMobile>
+            <Link 
+              style={MobileNavItem} 
+              onClick={(() => setToggled(!isToggled))} 
+              to="/"
+            >
+              Home
+            </Link>
+          </NavItemMobile>
+          <NavItemMobile>
+            <Link 
+              style={MobileNavItem} 
+              onClick={(() => setToggled(!isToggled))} 
+              to="/history"
+            >
+              History
+            </Link>
+          </NavItemMobile>
+          <NavItemMobile>
+            <Link 
+              style={MobileNavItem} 
+              onClick={(() => setToggled(!isToggled))} 
+              to="/upcoming-launches"
+            >
+              Upcoming Launches
+            </Link> 
+          </NavItemMobile>
+          <NavItemMobile>
+            <Link 
+              style={MobileNavItem} 
+              onClick={(() => setToggled(!isToggled))} 
+              to="/past-launches"
+            >
+              Past Launches
+            </Link>
+          </NavItemMobile>
+        </MobileNavContainer>
+      }
     </>
   )
 }
