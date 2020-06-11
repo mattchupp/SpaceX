@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'; 
 
@@ -9,6 +9,23 @@ const Nav = styled.nav`
   display: flex; 
   align-items: center; 
   padding: 1rem;
+
+  @media screen and (max-width: 800px) {
+    display: none; 
+  }
+`
+
+const MobileNav = styled.nav`
+  width: 100%;  
+  background-color: #0F2942; 
+  color: white; 
+  display: flex; 
+  align-items: center; 
+  padding: 1rem;
+
+  @media screen and (min-width: 800px) {
+    display: none; 
+  }
 `
 
 const NavItem = {
@@ -18,9 +35,9 @@ const NavItem = {
   'color': '#fff'
 }
 
-// const Toggle = styled.a`
-//   cursor: pointer; 
-// `
+const Toggle = styled.a`
+  cursor: pointer; 
+`
 
 // const Dropdown = styled.div`
 //   display: block; 
@@ -30,15 +47,21 @@ const NavItem = {
 
 function NavBar() {
 
-  // const [isToggled, setToggled] = useState(false); 
+  const [isToggled, setToggled] = useState(false); 
 
   return (
-    <Nav>
-        <Link style={NavItem} to="/">Home</Link>
-        <Link style={NavItem} to="/history">History</Link>
-        <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> 
-        <Link style={NavItem} to="/past-launches">Past Launches</Link> 
-    </Nav>
+    <>
+      <Nav>
+          <Link style={NavItem} to="/">Home</Link>
+          <Link style={NavItem} to="/history">History</Link>
+          <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> 
+          <Link style={NavItem} to="/past-launches">Past Launches</Link> 
+      </Nav>
+
+      <MobileNav>
+        <Toggle onClick={(() => setToggled(!isToggled))} style={NavItem}>Menu</Toggle>
+      </MobileNav>
+    </>
   )
 }
 
