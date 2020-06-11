@@ -48,9 +48,8 @@ const NavItemMobile = styled.li`
 `
 
 const MobileNavContainer = styled.ul`
-  'display': 'flex'; 
-  'flex-direction': 'column';
-  'align-items': 'center';
+  'margin': '1rem'; 
+  
 
   @media screen and (min-width: 800px) {
     display: none; 
@@ -84,7 +83,7 @@ function NavBar() {
         </Toggle>
       </MobileNav>
 
-      {isToggled && 
+      {!isToggled && 
         <MobileNavContainer>
           <NavItemMobile>
             <Link 
@@ -130,8 +129,3 @@ function NavBar() {
 
 
 export default NavBar
-
-/* 
-<Toggle onClick={(() => setToggled(!isToggled))} style={NavItem}>Launches</Toggle>
-  {isToggled && <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> }
-*/
