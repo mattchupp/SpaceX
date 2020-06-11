@@ -68,10 +68,10 @@ function NavBar() {
   return (
     <>
       <Nav>
-          <Link style={NavItem} to="/">Home</Link>
-          <Link style={NavItem} to="/history">History</Link>
-          <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> 
-          <Link style={NavItem} to="/past-launches">Past Launches</Link> 
+        <Link style={NavItem} to="/">Home</Link>
+        <Link style={NavItem} to="/history">History</Link>
+        <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> 
+        <Link style={NavItem} to="/past-launches">Past Launches</Link> 
       </Nav>
 
       <MobileNav>
