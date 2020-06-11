@@ -14,10 +14,7 @@ const Nav = styled.nav`
     display: none; 
   }
 `
-/* 
-  display: flex; 
-  align-items: center; 
-*/
+
 const MobileNav = styled.nav`
   width: 100%;  
   background-color: #0F2942; 
