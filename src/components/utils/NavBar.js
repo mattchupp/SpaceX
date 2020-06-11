@@ -83,7 +83,7 @@ function NavBar() {
         </Toggle>
       </MobileNav>
 
-      {!isToggled && 
+      {isToggled && 
         <MobileNavContainer>
           <NavItemMobile>
             <Link 
