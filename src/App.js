@@ -41,7 +41,7 @@ function App() {
             </div>
           </Route>
 
-          <Route exact path="/past-launches">
+          <Route exact path="/gallery">
             <div className="container">
               <Gallery />
             </div>
