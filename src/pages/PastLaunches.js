@@ -55,9 +55,10 @@ function PastLaunches() {
           title={event.mission_name}
           date={event.launch_date_unix}
           details={event.details}
-          reddit={event.links.reddit}
-          article={event.links.article}
+          reddit={event.links.reddit_media}
+          article={event.links.article_link}
           wikipedia={event.links.wikipedia}
+          youtube={event.links.video_link}
         />
       ))}
     </div>
