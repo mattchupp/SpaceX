@@ -11,6 +11,7 @@ import NavBar from './components/utils/NavBar';
 import Footer from './components/utils/Footer'; 
 import UpcomingLaunches from './pages/UpcomingLaunches';
 import PastLaunches from './pages/PastLaunches';
+import Gallery from './pages/Gallery'; 
 
 function App() {
   return (
@@ -37,6 +38,12 @@ function App() {
           <Route exact path="/past-launches">
             <div className="container">
               <PastLaunches />
+            </div>
+          </Route>
+
+          <Route exact path="/past-launches">
+            <div className="container">
+              <Gallery />
             </div>
           </Route>
 
