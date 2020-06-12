@@ -21,6 +21,7 @@ const Search = styled.input`
 function PastLaunches() {
 
   const [pastLaunches, setPastLaunches] = useState([]); 
+  // const [launchImages, setLaunchImages] = useState([]); 
   const [filterBy, setFilterBy] = useState('');
   
   
@@ -30,6 +31,7 @@ function PastLaunches() {
     .then(response => {
       console.log(response.data)
       setPastLaunches(response.data)
+      // setLaunchImages(response.data.links.flickr_images)
     })
     .then(error => {
       console.log(error)
@@ -60,6 +62,7 @@ function PastLaunches() {
           article={event.links.article_link}
           wikipedia={event.links.wikipedia}
           youtube={event.links.video_link}
+          images={event.links.flickr_images}
         />
       ))}
     </div>

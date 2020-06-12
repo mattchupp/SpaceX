@@ -56,6 +56,11 @@ const LinkButton = styled.a`
     color: #0c132b; 
   }
 `
+const imgStyles = {
+  'margin': '2rem 1rem 1rem 0',
+  'height': '400px',
+  'width': 'auto'
+}
 
 
 function Card(props) {
@@ -65,6 +70,9 @@ function Card(props) {
       <Title>{props.title}</Title>
       <span>{moment.unix(props.date).format("LLLL")}</span>
       {props.details ? <Details>{props.details}</Details> : <Details>Details Coming Soon</Details> }
+      {props.images && props.images.map((img) => (
+        <img key={img} style={imgStyles} src={img} alt="launch" />
+      ))}
       <Reading>
         {props.reddit &&
           <LinkButton
