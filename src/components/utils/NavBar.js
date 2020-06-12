@@ -20,7 +20,6 @@ const MobileNav = styled.nav`
   background-color: #0F2942; 
   color: white; 
   padding: 1rem 0 0 1rem; 
-  position: fixed; 
 
   @media screen and (min-width: 800px) {
     display: none; 
@@ -45,7 +44,7 @@ const MobileNavList = styled.ul`
 `
 
 const NavItemMobile = styled.li`
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 `
 
 const MobileNavContainer = styled.div`
