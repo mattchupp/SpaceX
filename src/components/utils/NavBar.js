@@ -81,6 +81,7 @@ function NavBar() {
         <Link style={NavItem} to="/history">History</Link>
         <Link style={NavItem} to="/upcoming-launches">Upcoming Launches</Link> 
         <Link style={NavItem} to="/past-launches">Past Launches</Link> 
+        <Link style={NavItem} to="/gallery">Gallery</Link> 
       </Nav>
 
       <MobileNav>
@@ -133,6 +134,16 @@ function NavBar() {
                   to="/past-launches"
                 >
                   Past Launches
+                </Link>
+              </NavItemMobile>
+
+              <NavItemMobile>
+                <Link 
+                  style={MobileNavItem} 
+                  onClick={(() => setToggled(!isToggled))} 
+                  to="/gallery"
+                >
+                  Gallery
                 </Link>
               </NavItemMobile>
             </MobileNavList>
