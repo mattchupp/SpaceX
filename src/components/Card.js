@@ -35,6 +35,13 @@ const Details = styled.p`
 `
 const Reading = styled.div`
   padding: 1rem 0; 
+  display: flex; 
+  flex-direction: row; 
+  align-items: start; 
+  @media screen and (max-width: 800px) {
+    flex-direction: column; 
+    align-items: center; 
+  }
 `
 const LinkButton = styled.a`
   padding: .5rem 1rem;
@@ -44,6 +51,10 @@ const LinkButton = styled.a`
   cursor: pointer;
   text-decoration: none;
   margin: 1rem 1rem 1rem 0;
+
+  &:hover {
+    color: #0c132b; 
+  }
 `
 
 
