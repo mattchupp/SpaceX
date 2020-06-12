@@ -28,7 +28,7 @@ function Gallery() {
   return (
     <div>
       {pastLaunches.map((launch) => (
-        <img key={launch.mission_name} src={launch.links.flickr_images} alt={launch.mission_name} />
+        <img key={launch.mission_name} src={launch.links.flickr_images} alt=""/>
       ))}
     </div>
   )
