@@ -33,12 +33,17 @@ const Details = styled.p`
   font-size: 1.2rem;
   line-height: 1.8rem;
 `
-const Reading = styled.ul`
-  list-style-type: none; 
+const Reading = styled.div`
+  padding: 1rem 0; 
 `
-const ReadingItem = styled.li`
-  display: inline;
-  margin-right: 1rem;
+const LinkButton = styled.a`
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #f5efd7;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1rem 1rem 1rem 0;
 `
 
 
@@ -51,37 +56,40 @@ function Card(props) {
       {props.details ? <Details>{props.details}</Details> : <Details>Details Coming Soon</Details> }
       <Reading>
         {props.reddit &&
-          <ReadingItem>
-            <a 
-              href={props.reddit} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Reddit
-            </a>
-          </ReadingItem>
+          <LinkButton
+            href={props.reddit} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Reddit
+          </LinkButton>
         }
         {props.article &&
-          <ReadingItem>
-            <a 
-              href={props.article} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Article
-            </a>
-          </ReadingItem>
+          <LinkButton
+          href={props.article} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Article
+        </LinkButton>
         }
         {props.wikipedia &&
-          <ReadingItem>
-            <a 
-              href={props.wikipedia} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Wikipedia
-            </a>
-          </ReadingItem>
+          <LinkButton
+          href={props.wikipedia} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Wikipedia
+        </LinkButton>
+        }
+        {props.youtube &&
+          <LinkButton
+          href={props.youtube} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Watch
+        </LinkButton>
         }
       </Reading>
       
