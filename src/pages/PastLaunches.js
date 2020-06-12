@@ -22,6 +22,7 @@ function PastLaunches() {
 
   const [pastLaunches, setPastLaunches] = useState([]); 
   const [filterBy, setFilterBy] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false); 
   
   
   useEffect(() => {
@@ -30,6 +31,7 @@ function PastLaunches() {
     .then(response => {
       console.log(response.data)
       setPastLaunches(response.data)
+      setIsLoaded(true); 
     })
     .then(error => {
       console.log(error)
@@ -41,30 +43,39 @@ function PastLaunches() {
     return launch.mission_name.toLowerCase().indexOf(filterBy.toLowerCase()) !== -1;
   })
   
-
-  return (
-    <div>
-      <Title>Past Launches</Title>
-      <Search 
-        placeholder="Search By Mission Name" 
-        value={filterBy} 
-        onChange={((e) => setFilterBy(e.target.value))}
-      />
-      {filteredLaunches.map((event) => (
-        <Card 
-          key={event.id}
-          title={event.mission_name}
-          date={event.launch_date_unix}
-          details={event.details}
-          reddit={event.links.reddit_media}
-          article={event.links.article_link}
-          wikipedia={event.links.wikipedia}
-          youtube={event.links.video_link}
-          images={event.links.flickr_images}
+  // Check if content is loading and then display
+  if(isLoaded) {
+    return (
+      <div>
+        <Title>Past Launches</Title>
+        <Search 
+          placeholder="Search By Mission Name" 
+          value={filterBy} 
+          onChange={((e) => setFilterBy(e.target.value))}
         />
-      ))}
-    </div>
-  )
+        {filteredLaunches.map((event) => (
+          <Card 
+            key={event.id}
+            title={event.mission_name}
+            date={event.launch_date_unix}
+            details={event.details}
+            reddit={event.links.reddit_media}
+            article={event.links.article_link}
+            wikipedia={event.links.wikipedia}
+            youtube={event.links.video_link}
+            images={event.links.flickr_images}
+          />
+        ))}
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    )
+  }
+  
 }
 
 
