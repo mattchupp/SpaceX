@@ -27,6 +27,10 @@ const LinkButton = styled.a`
   cursor: pointer;
   text-decoration: none;
   margin-right: 1rem;
+
+  &:hover {
+    color: #0c132b; 
+  }
 `
 
 function Launch(props) {
