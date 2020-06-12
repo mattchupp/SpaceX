@@ -14,6 +14,7 @@ const Title = styled.h1`
 
 const Search = styled.input`
   font-size: 1rem;
+  padding: .5rem .25rem;
 `
 
 
