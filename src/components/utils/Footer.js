@@ -8,7 +8,7 @@ const FooterContainer = styled.footer`
 function Footer() {
   return(
     <FooterContainer>
-      <div class="container">
+      <div className="container">
         <hr />
         <p>
           All information comes from the&nbsp; 
