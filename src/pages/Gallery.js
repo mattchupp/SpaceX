@@ -1,12 +1,10 @@
 /* Display upcoming launches from spacex */
 import React, { useEffect, useState } from 'react'; 
 import axios from 'axios'; 
-import styled from 'styled-components'; 
-// import Card from '../components/Card'; 
+// import styled from 'styled-components'; 
+import Carousel from '../components/Carousel'; 
 
-const ImgContainer = styled.div`
-  margin: .5rem 0; 
-`
+
 
 function Gallery() {
 
@@ -47,9 +45,7 @@ function Gallery() {
   if(isLoaded) {
     return (
       <div>
-        {launchImages.map((launch) => (
-          <img src={launch} />
-        ))}
+        <Carousel images={launchImages} />
       </div>
     )
   } else {
@@ -62,23 +58,3 @@ function Gallery() {
 
 
 export default Gallery
-
-
-/*
-if(isLoaded) {
-    return (
-      <div>
-        {pastLaunches.map((launch) => (
-          <>
-          {launch.links.flickr_images == '' ? null : 
-            <ImgContainer key={launch.mission_name} >
-              <img src={launch.links.flickr_images} alt=""/>
-            </ImgContainer>
-          }
-          </>
-        ))}
-      </div>
-    )
-  }
-
-*/
