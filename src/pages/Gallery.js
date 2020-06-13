@@ -6,20 +6,20 @@ import styled from 'styled-components';
 
 const ImgContainer = styled.div`
   margin: .5rem 0; 
-  border: 1px solid red; 
 `
 
 function Gallery() {
 
   const [pastLaunches, setPastLaunches] = useState([]); 
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false); 
+  const [launchImages, setLaunchImages] = useState([]); 
   
   
   useEffect(() => {
 
     axios.get('https://api.spacexdata.com/v3/launches/past')
     .then(response => {
-      console.log(response.data)
+      // console.log(response.data)
       setPastLaunches(response.data)
       setIsLoaded(true)
     })
@@ -29,21 +29,26 @@ function Gallery() {
     
   }, [])
 
-  const border = {
-    'border': '1px solid white'
-  }
+  /* 
+    After response is loaded push just image links to luanchImages
+  */
+  useEffect(() => {
+
+    const imageArray = []
+    pastLaunches.map((launch) => {
+      imageArray.push(launch.links.flickr_images)
+    })
+
+    setLaunchImages(imageArray)
+    // console.log(imageArray)
+
+  }, [pastLaunches])
 
   if(isLoaded) {
     return (
-      <div style={border}>
-        {pastLaunches.map((launch) => (
-          <>
-          {launch.links.flickr_images == '' ? null : 
-            <ImgContainer>
-              <img key={launch.mission_name} src={launch.links.flickr_images} alt=""/>
-            </ImgContainer>
-          }
-          </>
+      <div>
+        {launchImages.map((launch) => (
+          <img src={launch} />
         ))}
       </div>
     )
@@ -57,3 +62,23 @@ function Gallery() {
 
 
 export default Gallery
+
+
+/*
+if(isLoaded) {
+    return (
+      <div>
+        {pastLaunches.map((launch) => (
+          <>
+          {launch.links.flickr_images == '' ? null : 
+            <ImgContainer key={launch.mission_name} >
+              <img src={launch.links.flickr_images} alt=""/>
+            </ImgContainer>
+          }
+          </>
+        ))}
+      </div>
+    )
+  }
+
+*/
