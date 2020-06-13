@@ -10,7 +10,8 @@ Hosted for free on [Netlify](https://netlify.com).
 
 
 ## _Currently in progress_
-- [ ] Add Gallery page to view photos of all flights
+- [x] Add Gallery page to view photos of all flights
+- [ ] Make Gallery page into a slideshow with arrows to go click through images
 
 ## Available Scripts
 
