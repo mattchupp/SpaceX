@@ -1,11 +1,14 @@
 import React from 'react'; 
 import styled from 'styled-components'; 
 
+const SlideShowContainer = styled.div`
+
+`
 
 function Carousel(props) {
 
   return (
-    <div>
+    <SlideShowContainer>
       {props.images.map((image) => (
         <>
           {image == '' ? null : 
@@ -13,7 +16,7 @@ function Carousel(props) {
           }
         </>
       ))}
-    </div>
+    </SlideShowContainer>
   )
 
 }
