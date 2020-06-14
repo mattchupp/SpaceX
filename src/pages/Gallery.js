@@ -34,7 +34,7 @@ function Gallery() {
 
     const imageArray = []
     pastLaunches.map((launch) => {
-      imageArray.push(launch.links.flickr_images)
+      return imageArray.push(launch.links.flickr_images)
     })
 
     setLaunchImages(imageArray)

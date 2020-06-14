@@ -12,7 +12,7 @@ function Carousel(props) {
       {props.images.map((image) => (
         <>
           {image == '' ? null : 
-            <img key={image} src={image} />
+            <img key={image} src={image} alt="launch"/>
           }
         </>
       ))}
