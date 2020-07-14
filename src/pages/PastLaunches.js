@@ -53,7 +53,7 @@ function PastLaunches() {
           value={filterBy} 
           onChange={((e) => setFilterBy(e.target.value))}
         />
-        {filteredLaunches.map((event) => (
+        {filteredLaunches.slice(0).reverse().map((event) => (
           <Card 
             key={event.id}
             title={event.mission_name}
